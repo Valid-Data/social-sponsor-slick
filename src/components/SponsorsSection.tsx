@@ -40,24 +40,25 @@ export const SponsorsSection = () => {
   }, []);
 
   return (
-    <section className="py-24 px-4 bg-secondary/50">
+    <section className="py-32 px-4 bg-gradient-to-b from-background to-secondary/30">
       <div className="max-w-6xl mx-auto space-y-12">
         <div className="text-center space-y-4">
           <div className="inline-flex items-center gap-2 rounded-full px-4 py-1 text-sm font-medium bg-accent/10 text-accent">
             <Star className="h-4 w-4" />
             Our Sponsors
           </div>
-          <h2 className="section-title">
-            Proudly Supported By Industry Leaders
+          <h2 className="section-title text-4xl sm:text-5xl font-bold tracking-tight">
+            Proudly Supported By
+            <span className="text-accent"> Industry Leaders</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Join these amazing organizations in supporting our mission to revolutionize social calendaring
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            Join these amazing organizations in supporting our mission to revolutionize digital administration
           </p>
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {sponsors.map((sponsor) => (
-            <div key={sponsor.id} className="sponsor-card">
+            <div key={sponsor.id} className="sponsor-card hover:border-accent/20">
               <img
                 src={sponsor.logo}
                 alt={sponsor.name}
